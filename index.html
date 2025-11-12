@@ -4,26 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aedong Hotel</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Lato', Arial, sans-serif;
       margin: 0;
       padding: 0;
       background: #f5f5f5;
+      color: #333;
     }
 
-    /* Header with semi-transparent overlay */
+    /* Header with overlay */
     header {
       position: relative;
       background-image: url("https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg");
       background-size: cover;
       background-position: center;
-      color: white;
-      text-align: center;
-      height: 400px;
+      height: 500px;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      color: white;
     }
     header::before {
       content: "";
@@ -31,18 +36,29 @@
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+      background: rgba(0,0,0,0.55); /* darker overlay for elegance */
       z-index: 1;
     }
-    header h1, header p {
+    header div {
       position: relative;
       z-index: 2;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4em;
+      letter-spacing: 3px;
       margin: 0;
-      text-shadow: 2px 2px 6px #000;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
       opacity: 0;
       animation: fadeIn 2s forwards;
     }
     header p {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.5em;
+      margin-top: 15px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      opacity: 0;
+      animation: fadeIn 2s forwards;
       animation-delay: 1s;
     }
 
@@ -53,16 +69,21 @@
     nav {
       text-align: center;
       background-color: #005599;
-      padding: 10px 0;
+      padding: 12px 0;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 18px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      font-family: 'Lato', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s;
     }
     nav a:hover {
       text-decoration: underline;
+      color: #ffd700; /* subtle gold for elegance */
     }
 
     .hero {
@@ -70,11 +91,12 @@
       background-size: cover;
       background-position: center;
       height: 400px;
-      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'Playfair Display', serif;
       font-size: 2.5em;
+      color: white;
       text-shadow: 2px 2px 6px #000;
       opacity: 0;
       animation: fadeIn 2s forwards;
@@ -83,14 +105,19 @@
 
     .container {
       max-width: 1000px;
-      margin: 20px auto;
+      margin: 30px auto;
       padding: 0 20px;
     }
+
     h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
       color: #003366;
       border-bottom: 2px solid #003366;
-      padding-bottom: 5px;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
     }
+
     .rooms, .amenities, .reviews {
       display: flex;
       gap: 20px;
@@ -99,53 +126,65 @@
     }
     .room, .amenity, .review {
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       flex: 1 1 300px;
-      padding: 15px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .room:hover, .amenity:hover {
+      transform: translateY(-5px);
     }
     .room img, .amenity img {
       max-width: 100%;
-      border-radius: 8px;
+      border-radius: 12px;
+      margin-bottom: 15px;
     }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
-      margin-top: 30px;
-    }
+
     .booking-form {
       background: white;
-      padding: 20px;
+      padding: 30px;
       max-width: 500px;
-      margin: 30px auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .booking-form label {
       display: block;
-      margin: 10px 0 5px;
+      margin: 12px 0 5px;
+      font-weight: 600;
     }
     .booking-form input, .booking-form select, .booking-form button {
       width: 100%;
-      padding: 8px;
+      padding: 10px;
       margin-bottom: 15px;
-      border-radius: 4px;
+      border-radius: 6px;
       border: 1px solid #ccc;
+      font-size: 1em;
     }
     .booking-form button {
       background-color: #005599;
       color: white;
       font-weight: bold;
       cursor: pointer;
+      transition: 0.3s;
     }
     .booking-form button:hover {
       background-color: #003366;
     }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      font-family: 'Lato', sans-serif;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <div>
       <h1>Aedong Hotel</h1>
@@ -167,6 +206,7 @@
   </section>
 
   <div class="container">
+
     <!-- Rooms Section -->
     <section id="rooms">
       <h2>Our Rooms</h2>
