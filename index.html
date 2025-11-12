@@ -11,12 +11,45 @@
       padding: 0;
       background: #f5f5f5;
     }
+
+    /* Header with semi-transparent overlay */
     header {
-      background-color: #003366;
+      position: relative;
+      background-image: url("https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg");
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 20px 40px;
       text-align: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      text-shadow: 2px 2px 6px #000;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    header p {
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
     nav {
       text-align: center;
       background-color: #005599;
@@ -31,8 +64,9 @@
     nav a:hover {
       text-decoration: underline;
     }
+
     .hero {
-      background-image: url("https://unsplash.com/photos/3d-        render-of-luxury-hotel-lobby-and-reception-FNAURWZ6Mqc");
+      background-image: url("https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg");
       background-size: cover;
       background-position: center;
       height: 400px;
@@ -42,7 +76,11 @@
       justify-content: center;
       font-size: 2.5em;
       text-shadow: 2px 2px 6px #000;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 2s;
     }
+
     .container {
       max-width: 1000px;
       margin: 20px auto;
@@ -109,9 +147,12 @@
 </head>
 <body>
   <header>
-    <h1>Aedong Hotel</h1>
-    <p>Escape the ordinary, discover the extraordinary</p>
+    <div>
+      <h1>Aedong Hotel</h1>
+      <p>Escape the ordinary, discover the extraordinary</p>
+    </div>
   </header>
+
   <nav>
     <a href="#rooms">Rooms</a>
     <a href="#amenities">Amenities</a>
@@ -120,10 +161,13 @@
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
+
   <section class="hero">
     Welcome to Aedong Hotel
   </section>
+
   <div class="container">
+    <!-- Rooms Section -->
     <section id="rooms">
       <h2>Our Rooms</h2>
       <div class="rooms">
@@ -140,13 +184,15 @@
           <p><strong>Price: ₱6,999/night</strong></p>
         </div>
         <div class="room">
-          <img src="https://octorate.com/wordpress/wp-content/uploads/2023/02/tipologie-lusso.webp" alt="Suite" />
-          <h3>Suite</h3>
+          <img src="https://octorate.com/wordpress/wp-content/uploads/2023/02/tipologie-lusso.webp" alt="Suite Room" />
+          <h3>Suite Room</h3>
           <p>Luxurious suite with living area, kitchen, and premium amenities.</p>
           <p><strong>Price: ₱11,600/night</strong></p>
         </div>
       </div>
     </section>
+
+    <!-- Amenities Section -->
     <section id="amenities">
       <h2>Amenities</h2>
       <div class="amenities">
@@ -167,6 +213,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Booking Section -->
     <section id="booking">
       <h2>Book a Room</h2>
       <form class="booking-form" action="#" method="post">
@@ -193,11 +241,13 @@
         <button type="submit">Book Now</button>
       </form>
     </section>
+
+    <!-- Location Section -->
     <section id="location">
       <h2>Our Location</h2>
       <p>175 Iba, Zambales, Philippines</p>
       <iframe 
-        src="15.32802° N, 119.97781° E" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.428148621844!2d119.9756227146231!3d15.328022391689568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3391e75a14b7f0b7%3A0xe5d263f7b56bfa0a!2sIba%2C%20Zambales%2C%20Philippines!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" 
         width="100%" 
         height="300" 
         style="border:0;" 
@@ -205,6 +255,8 @@
         loading="lazy">
       </iframe>
     </section>
+
+    <!-- Reviews Section -->
     <section id="reviews">
       <h2>Customer Reviews</h2>
       <div class="reviews">
@@ -218,12 +270,15 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact Us</h2>
       <p>Email: info@aedonghotel.com</p>
       <p>Phone: +123 456 7890</p>
     </section>
   </div>
+
   <footer>
     <p>&copy; 2025 Aedong Hotel. All rights reserved.</p>
   </footer>
