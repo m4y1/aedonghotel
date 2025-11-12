@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aedong Hotel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      background-color: #005599;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background-image: url("https://unsplash.com/photos/3d-        render-of-luxury-hotel-lobby-and-reception-FNAURWZ6Mqc");
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 6px #000;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 5px;
+    }
+    .rooms, .amenities, .reviews {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .room, .amenity, .review {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+      padding: 15px;
+    }
+    .room img, .amenity img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 30px;
+    }
+    .booking-form {
+      background: white;
+      padding: 20px;
+      max-width: 500px;
+      margin: 30px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .booking-form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    .booking-form input, .booking-form select, .booking-form button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .booking-form button {
+      background-color: #005599;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background-color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aedong Hotel</h1>
+    <p>Escape the ordinary, discover the extraordinary</p>
+  </header>
+  <nav>
+    <a href="#rooms">Rooms</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#booking">Book Now</a>
+    <a href="#location">Location</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section class="hero">
+    Welcome to Aedong Hotel
+  </section>
+  <div class="container">
+    <section id="rooms">
+      <h2>Our Rooms</h2>
+      <div class="rooms">
+        <div class="room">
+          <img src="https://www.kabayanhotel.com.ph/wp-content/uploads/2016/02/kabayan-standardroom-01.jpg" alt="Standard Room" />
+          <h3>Standard Room</h3>
+          <p>A comfortable room with a queen bed, free Wi-Fi, and city view.</p>
+          <p><strong>Price: ₱4,999/night</strong></p>
+        </div>
+        <div class="room">
+          <img src="https://octorate.com/wordpress/wp-content/uploads/2023/02/camera-deluxe-significato.webp" alt="Deluxe Room" />
+          <h3>Deluxe Room</h3>
+          <p>Spacious room with king bed, ocean view, and complimentary breakfast.</p>
+          <p><strong>Price: ₱6,999/night</strong></p>
+        </div>
+        <div class="room">
+          <img src="https://octorate.com/wordpress/wp-content/uploads/2023/02/tipologie-lusso.webp" alt="Suite" />
+          <h3>Suite</h3>
+          <p>Luxurious suite with living area, kitchen, and premium amenities.</p>
+          <p><strong>Price: ₱11,600/night</strong></p>
+        </div>
+      </div>
+    </section>
+    <section id="amenities">
+      <h2>Amenities</h2>
+      <div class="amenities">
+        <div class="amenity">
+          <img src="https://example.com/pool.jpg" alt="Swimming pool" />
+          <h3>Swimming Pool</h3>
+          <p>Relax in our outdoor heated swimming pool.</p>
+        </div>
+        <div class="amenity">
+          <img src="https://example.com/spa.jpg" alt="Spa" />
+          <h3>Spa and Wellness</h3>
+          <p>Enjoy our full-service spa treatments and wellness center.</p>
+        </div>
+        <div class="amenity">
+          <img src="https://example.com/restaurant.jpg" alt="Restaurant" />
+          <h3>Restaurant</h3>
+          <p>Delicious international dishes served fresh daily.</p>
+        </div>
+      </div>
+    </section>
+    <section id="booking">
+      <h2>Book a Room</h2>
+      <form class="booking-form" action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="room-type">Room Type</label>
+        <select id="room-type" name="room-type" required>
+          <option value="">Select a room</option>
+          <option value="standard">Standard Room</option>
+          <option value="deluxe">Deluxe Room</option>
+          <option value="suite">Suite</option>
+        </select>
+
+        <label for="checkin">Check-in Date</label>
+        <input type="date" id="checkin" name="checkin" required />
+
+        <label for="checkout">Check-out Date</label>
+        <input type="date" id="checkout" name="checkout" required />
+
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+    <section id="location">
+      <h2>Our Location</h2>
+      <p>175 Iba, Zambales, Philippines</p>
+      <iframe 
+        src="15.32802° N, 119.97781° E" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </section>
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="reviews">
+        <div class="review">
+          <p>"Wonderful stay! Staff were friendly and the pool was amazing."</p>
+          <p><strong>- Guzman, Christian.</strong></p>
+        </div>
+        <div class="review">
+          <p>"Great location and delicious food in the restaurant."</p>
+          <p><strong>- Lim, Allison.</strong></p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@aedonghotel.com</p>
+      <p>Phone: +123 456 7890</p>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 Aedong Hotel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
