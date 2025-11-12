@@ -16,10 +16,9 @@
       background: #f5f5f5;
       color: #333;
     }
-
     header {
       position: relative;
-      background-image: url("https://isorepublic.com/wp-content/uploads/2019/10/iso-republic-resort-swimming-pool-1100x733.jpg");
+      background-image: url("https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg");
       background-size: cover;
       background-position: center;
       height: 500px;
@@ -32,15 +31,13 @@
     header::before {
       content: "";
       position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 1;
+      top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.55);
+      z-index:1;
     }
     header div {
       position: relative;
-      z-index: 2;
+      z-index:2;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
@@ -48,21 +45,12 @@
       letter-spacing: 3px;
       margin: 0;
       text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
-      opacity: 0;
-      animation: fadeIn 2s forwards;
     }
     header p {
       font-family: 'Lato', sans-serif;
       font-size: 1.5em;
-      margin-top: 15px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-      opacity: 0;
-      animation: fadeIn 2s forwards;
-      animation-delay: 1s;
-    }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
+      margin-top:15px;
+      text-shadow:2px 2px 6px rgba(0,0,0,0.7);
     }
 
     nav {
@@ -74,10 +62,10 @@
       color: white;
       margin: 0 18px;
       text-decoration: none;
-      font-weight: 700;
+      font-weight:700;
       font-family: 'Lato', sans-serif;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing:1px;
       transition: 0.3s;
     }
     nav a:hover {
@@ -86,40 +74,34 @@
     }
 
     .hero {
-      background-image: url("https://isorepublic.com/wp-content/uploads/2019/10/iso-republic-resort-swimming-pool-1100x733.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      color: white;
-      text-shadow: 2px 2px 6px #000;
-      opacity: 0;
-      animation: fadeIn 2s forwards;
-      animation-delay: 2s;
-    }
+  background: none;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  color: #003366;
+  text-shadow: none;
+}
 
     .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
+      max-width:1000px;
+      margin:30px auto;
+      padding:0 20px;
     }
-
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2em;
-      color: #003366;
-      border-bottom: 2px solid #003366;
+      font-size:2em;
+      color:#003366;
+      border-bottom:2px solid #003366;
       padding-bottom: 8px;
-      margin-bottom: 20px;
+      margin-bottom:20px;
     }
 
     .rooms, .amenities, .reviews {
       display: flex;
-      gap: 20px;
+      gap:20px;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -127,45 +109,45 @@
       background: white;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      flex: 1 1 300px;
-      padding: 20px;
+      flex:1 1 300px;
+      padding:20px;
       transition: transform 0.3s;
     }
     .room:hover, .amenity:hover {
       transform: translateY(-5px);
     }
     .room img, .amenity img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
+      max-width:100%;
+      border-radius:12px;
+      margin-bottom:15px;
     }
 
     .booking-form {
       background: white;
-      padding: 30px;
-      max-width: 500px;
-      margin: 40px auto;
-      border-radius: 12px;
+      padding:30px;
+      max-width:500px;
+      margin:40px auto;
+      border-radius:12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .booking-form label {
-      display: block;
-      margin: 12px 0 5px;
-      font-weight: 600;
+      display:block;
+      margin:12px 0 5px;
+      font-weight:600;
     }
     .booking-form input, .booking-form select, .booking-form button {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1em;
+      width:100%;
+      padding:10px;
+      margin-bottom:15px;
+      border-radius:6px;
+      border:1px solid #ccc;
+      font-size:1em;
     }
     .booking-form button {
       background-color: #005599;
       color: white;
       font-weight: bold;
-      cursor: pointer;
+      cursor:pointer;
       transition: 0.3s;
     }
     .booking-form button:hover {
@@ -175,13 +157,12 @@
     footer {
       background-color: #003366;
       color: white;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 40px;
+      text-align:center;
+      padding:20px 10px;
+      margin-top:40px;
       font-family: 'Lato', sans-serif;
     }
   </style>
-
 </head>
 <body>
 
@@ -237,19 +218,20 @@
       <h2>Amenities</h2>
       <div class="amenities">
         <div class="amenity">
-          <img src="https://images.pexels.com/photos/3951896/pexels-photo-3951896.jpeg" alt="Spa and Wellness" />
-          <h3>Spa & Wellness</h3>
-          <p>Enjoy our full‑service spa treatments and wellness center.</p>
+          <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg" alt="Swimming Pool" />
+          <h3>Swimming Pool</h3>
+          <p>Relax in our outdoor pool with a beautiful view.</p>
         </div>
         <div class="amenity">
-          <img src="https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg" alt="Restaurant Dining" />
+          <img src="https://i.pinimg.com/originals/53/bf/fc/53bffc774772840dc0992d589e3e6e60.jpg" 
+alt="Spa & Wellness" />
+          <h3>Spa & Wellness</h3>
+          <p>Enjoy our full-service spa treatments and wellness center.</p>
+        </div>
+        <div class="amenity">
+          <img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg" alt="Restaurant Dining" />
           <h3>Restaurant</h3>
           <p>Delicious international dishes served fresh daily.</p>
-        </div>
-        <div class="amenity">
-          <img src="https://images.pexels.com/photos/3951883/pexels-photo-3951883.jpeg" alt="Gym & Fitness" />
-          <h3>Gym & Fitness</h3>
-          <p>State‑of‑the‑art fitness centre open 24‑hours.</p>
         </div>
       </div>
     </section>
@@ -315,8 +297,9 @@
     <section id="contact">
       <h2>Contact Us</h2>
       <p>Email: info@aedonghotel.com</p>
-      <p>Phone: +123 456 7890</p>
+      <p>Phone: +123 456 7890</p>
     </section>
+
   </div>
 
   <footer>
